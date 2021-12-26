@@ -1,0 +1,424 @@
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: "Barlow", sans-serif;
+}
+
+/* ======= HEADER ======= */
+header {
+  background-image: url("images/desktop/image-header.jpg");
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  margin-top: -10px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 80px;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  background-color: #3dbeff;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+nav ul {
+  width: 40%;
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  /* padding: 10px 20px 15px; */
+}
+
+nav ul li a:hover {
+  border-bottom: 2px solid white;
+}
+
+nav .menu-toggle {
+  display: none;
+  /* position: absolute; */
+}
+
+/* nav ul li a.button {
+  background-color: black;
+  border-radius: 30px;
+}
+
+nav ul li a.button:hover {
+  border: none;
+} */
+
+/* nav ul li a.button {
+  display: inline-block;
+  font-family: "Fraunces", serif;
+  color: black;
+  background-color: white;
+  border-radius: 3px;
+} */
+
+header h1 {
+  font-family: "Fraunces", serif;
+  color: white;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 3em;
+  letter-spacing: 8px;
+  display: flex;
+  justify-content: center;
+  padding-top: 150px;
+  margin-top: 90px;
+  margin-bottom: 100px;
+}
+
+/* ======= END HEADER ======= */
+
+/* ======= ARTICLE ======= */
+article {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+    "item-detail-1 item-pict-1"
+    "item-pict-2 item-detail-2"
+    "item-pict-detail-1 item-pict-detail-2";
+}
+
+article .item-detail {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  padding-left: 20%;
+  padding-right: 10%;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+article .item-detail h2 {
+  font: 900 2.3em "Fraunces", serif;
+}
+
+article .item-detail p {
+  line-height: 1.7em;
+  color: #868590;
+  margin: 30px 0;
+}
+
+article .item-detail a.button {
+  font-family: "fraunces", serif;
+  font-weight: 900;
+  text-decoration: underline;
+  text-transform: uppercase;
+  color: black;
+  /* padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 3px 5px rgba(0, 0, 0, 0.1); */
+}
+
+article .item-detail a.button:hover {
+  color: rgb(95, 95, 95);
+}
+
+article .item-pict {
+  background-size: cover;
+  background-position: center;
+}
+
+article .item-detail-1 {
+  grid-area: item-detail-1;
+}
+
+article .item-pict-1 {
+  grid-area: item-pict-1;
+  background-image: url("images/desktop/image-transform.jpg");
+}
+
+article .item-pict-2 {
+  grid-area: item-pict-2;
+  background-image: url("images/desktop/image-stand-out.jpg");
+}
+
+article .item-detail-2 {
+  grid-area: item-detail-2;
+}
+
+article .item-pict-detail {
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: end; */
+  /* align-items: center; */
+  box-sizing: border-box;
+  padding: 350px 20% 0;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+article .item-pict-detail h3 {
+  font-family: "Fraunces", serif;
+  font-size: 1.7em;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+article .item-pict-detail p {
+  text-align: center;
+  margin: 20px 0 60px 0;
+}
+
+article .item-pict-detail-1 {
+  background-image: url("images/desktop/image-graphic-design.jpg");
+  grid-area: item-pict-detail-1;
+}
+
+article .item-pict-detail-2 {
+  background-image: url("images/desktop/image-photography.jpg");
+  height: 600px;
+  background-size: cover;
+  grid-area: item-pict-detail-2;
+}
+/* ======= END ARTICLE ======= */
+
+/* ======= TESTIMONI ======= */
+.testimoni {
+  /* min-height: 800px; */
+  padding: 100px 0;
+}
+
+.testimoni h3 {
+  font-family: "Fraunces", serif;
+  color: #868590;
+  /* display: flex;
+  justify-content: center; */
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin: 40px 0;
+  font-size: 1.5em;
+}
+
+.testimoni .grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.testimoni .grid-container .client {
+  width: 300px;
+  text-align: center;
+  padding: 40px;
+  margin: 20px 20px 40px;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.client img {
+  height: 80px;
+  border-radius: 50%;
+}
+
+.client .text {
+  color: #868590;
+  margin: 50px 0;
+}
+
+.client .name {
+  font-family: "Fraunces", serif;
+  font-size: 1.5em;
+}
+
+.client .carrier {
+  font-size: 0.9em;
+  opacity: 0.5;
+}
+/* ======= END TESTIMONI ======= */
+
+/* ======= GALLERY ======= */
+.gallery {
+  display: grid;
+  grid-template-areas: "img-1 img-2 img-3 img-4";
+  grid-template-columns: repeat(1fr);
+}
+
+.gallery .img {
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+}
+
+.gallery .img-1 {
+  background-image: url("images/desktop/image-gallery-milkbottles.jpg");
+  grid-area: img-1;
+}
+.gallery .img-2 {
+  background-image: url("images/desktop/image-gallery-orange.jpg");
+  grid-area: img-2;
+}
+.gallery .img-3 {
+  background-image: url("images/desktop/image-gallery-cone.jpg");
+  grid-area: img-3;
+}
+.gallery .img-4 {
+  background-image: url("images/desktop/image-gallery-sugarcubes.jpg");
+  grid-area: img-4;
+}
+
+/* ======= FOOTER ======= */
+footer {
+  background-color: #90d4c5;
+  text-align: center;
+}
+
+footer .logo img {
+  filter: brightness(0);
+  opacity: 0.5;
+  margin: 50px 0 20px;
+}
+
+footer ul.nav-footer {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+footer ul.nav-footer a {
+  text-decoration: none;
+  margin: 20px 20px 30px;
+  color: #2c7566;
+}
+
+footer ul.nav-footer a:hover {
+  color: white;
+}
+
+footer ul.sosmed-icon {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 60px 0 30px;
+}
+
+footer ul.sosmed-icon a {
+  margin: 20px 10px 30px;
+}
+
+footer ul.sosmed-icon a:hover {
+  filter: brightness(500%);
+}
+
+footer .attribution {
+  padding-bottom: 20px;
+}
+
+footer .attribution a:hover {
+  color: white;
+}
+
+/* ==================== RESPONSIVE BREAKPOINT ==================== */
+
+/* ========== Tablet ========== */
+@media screen and (max-width: 991.98px) {
+  nav ul {
+    width: 50%;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+  }
+}
+
+/* ========== Phone Landscape/Tablet ========== */
+@media screen and (max-width: 767.98px) {
+  nav ul {
+    /* display: none; */
+    width: 100%;
+    position: absolute;
+    flex-direction: column;
+    left: 0;
+    right: 0;
+    top: 80%;
+    background-color: #3dbeff;
+    z-index: -10;
+    height: 50vh;
+    transform: translateY(-150%);
+    transition: all 0.7s;
+  }
+
+  nav ul.slide {
+    transform: translateY(0);
+  }
+
+  nav .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  nav .border {
+    box-sizing: border-box;
+    border: 3px solid #ffffff;
+    padding: 3px 3px 0;
+    border-radius: 5px;
+  }
+
+  article {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "item-detail-1"
+      "item-pict-1"
+      "item-detail-2"
+      "item-pict-2"
+      "item-pict-detail-1"
+      "item-pict-detail-2";
+  }
+
+  article .item-detail {
+    padding-left: 10%;
+  }
+
+  article .item-pict {
+    height: 600px;
+  }
+  .gallery {
+    display: grid;
+    grid-template-areas:
+      "img-1 img-2"
+      "img-3 img-4";
+    grid-template-columns: repeat(1fr);
+  }
+}
+
+/* ========== Phone ========== */
+@media screen and (max-width: 575.98px) {
+  header h1 {
+    font-size: 2.5em;
+  }
+
+  .testimoni {
+    /* min-height: 800px; */
+    padding: 50px 0 100px;
+  }
+
+  .testimoni h3 {
+    margin: 40px 10%;
+  }
+
+  .gallery .img {
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+  }
+}
